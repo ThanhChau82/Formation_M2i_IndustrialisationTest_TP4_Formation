@@ -1,9 +1,27 @@
 package edu.m2i.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.Min;
+
+import org.springframework.lang.NonNull;
+
+@Entity
 public class Formation {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	private float prix;
+	
+	@NonNull
+	@Min(10)
 	private String description;
+	
+	@NonNull
+	@Min(6)
 	private String titre;
 	
 	public Formation() {
