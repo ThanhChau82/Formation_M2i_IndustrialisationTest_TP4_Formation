@@ -1,37 +1,40 @@
 package edu.m2i.entities;
 
 public class Formation {
-	private int Id;
-	private String prix;
+	private Integer id;
+	private float prix;
 	private String description;
 	private String titre;
 	
 	public Formation() {
 		super();
 	}
-	public Formation(String prix, String description, String titre) {
+	
+	public Formation(float prix, String description, String titre) {
 		super();
 		this.prix = prix;
 		this.description = description;
 		this.titre = titre;
 	}
-	public Formation(int id, String prix, String description, String titre) {
+
+	public Formation(Integer id, float prix, String description, String titre) {
 		super();
-		Id = id;
+		this.id = id;
 		this.prix = prix;
 		this.description = description;
 		this.titre = titre;
 	}
-	public int getId() {
-		return Id;
+
+	public Integer getId() {
+		return id;
 	}
-	public void setId(int id) {
-		Id = id;
-	}
-	public String getPrix() {
+	public void setId(Integer id) {
+		this.id = id;
+	}	
+	public float getPrix() {
 		return prix;
 	}
-	public void setPrix(String prix) {
+	public void setPrix(float prix) {
 		this.prix = prix;
 	}
 	public String getDescription() {
@@ -48,7 +51,6 @@ public class Formation {
 	}
 	@Override
 	public String toString() {
-		return "Formation [Id=" + Id + ", prix=" + prix + ", description=" + description + ", titre=" + titre + "]";
+		return "Formation [id=" + id + ", prix=" + prix + ", description=" + description + ", titre=" + titre + "]";
 	}
-	
 }

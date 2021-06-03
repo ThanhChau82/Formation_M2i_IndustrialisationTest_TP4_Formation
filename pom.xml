@@ -14,7 +14,7 @@
 	<name>Formation_M2i_IndustrialisationTest_TP4_Formation</name>
 	<description>Project Spring Boot for Jenkins</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

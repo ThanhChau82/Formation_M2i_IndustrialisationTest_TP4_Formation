@@ -1,7 +1,7 @@
 package edu.m2i.entities;
 
 public class Session {
-	private int id;
+	private Integer id;
 	private String date;
 	private String formation;
 	private int duree;
@@ -15,17 +15,18 @@ public class Session {
 		this.formation = formation;
 		this.duree = duree;
 	}
-	public Session(int id, String date, String formation, int duree) {
+	
+	public Session(Integer id, String date, String formation, int duree) {
 		super();
 		this.id = id;
 		this.date = date;
 		this.formation = formation;
 		this.duree = duree;
 	}
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getDate() {
