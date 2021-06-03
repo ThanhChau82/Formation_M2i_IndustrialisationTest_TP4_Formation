@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.lang.NonNull;
 
@@ -14,12 +15,14 @@ public class Session {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
+	@NotNull
 	private String date;
 	
 	@NonNull
 	@Min(6)
 	private String formation;
 	
+	@NotNull
 	private int duree;
 	
 	public Session() {

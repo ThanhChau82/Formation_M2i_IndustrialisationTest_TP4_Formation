@@ -5,8 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 
-import org.springframework.lang.NonNull;
+import com.sun.istack.NotNull;
+
 
 @Entity
 public class Formation {
@@ -14,14 +16,13 @@ public class Formation {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
+	@NotNull
 	private float prix;
 	
-	@NonNull
-	@Min(10)
+	@NotBlank
 	private String description;
 	
-	@NonNull
-	@Min(6)
+	@NotBlank
 	private String titre;
 	
 	public Formation() {
